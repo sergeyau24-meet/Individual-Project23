@@ -43,3 +43,24 @@
     </form>
     <br>
     <a href="/"><button>signin</button></a>
+
+
+              <!--  <table>
+                  <tr>
+                    {%for d in r[0]%}
+                    <th>{{d}}</th>
+                    {%endfor%}
+                  </tr>
+                  <tr>
+                    {%for e in r[1]%}
+                    <td>{{e}}</td>
+                    {%endfor%}
+
+                    {%for e in range(7)%}
+                    {%for z in range(7)%}
+
+                    <td>{{r[e][z]}}</td>
+                  </tr>
+                  
+                </table> -->
+                

@@ -10,6 +10,24 @@
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="../static/css/style.css" rel="stylesheet" />
+
+        <style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
     </head>
     <body>
         <!-- Responsive navbar-->
@@ -36,8 +54,242 @@
         <!-- Page content-->
         <div class="container">
             <div class="text-center mt-5">
-                <h1>Hello {{n}}, welcome to surFine!!!</h1>
-                
+                <h4>Hello {{n}}, welcome to surFine!!!</h4>
+                <br>
+                <h5>Enjoy the forecast for Marina Hertzlia</h5>
+                <!-- {%for c in r%}
+                <p>{{c}}</p>
+                {%endfor%} -->
+
+                <table>
+                  <tr>
+                    {%for d in c%}
+                    <th>{{d}}</th>
+                    {%endfor%}
+                  </tr>
+                  <tr>
+                    {%for e in r[:7]%}
+                    <td>{{e}}</td>
+                    {%endfor%}
+                  </tr>
+
+                  <tr>
+                    {%for e in r[7:14]%}
+                    <td>{{e}}</td>
+                    {%endfor%}
+                  </tr>
+                  <tr>
+                    {%for e in r[14:21]%}
+                    <td>{{e}}</td>
+                    {%endfor%}
+                  </tr>
+                  <tr>
+                    {%for e in r[21:28]%}
+                    <td>{{e}}</td>
+                    {%endfor%}
+                  </tr>
+
+                  <tr>
+                    {%for e in r[28:35]%}
+                    <td>{{e}}</td>
+                    {%endfor%}
+                  </tr>
+
+                   <tr>
+                    {%for e in r[35:42]%}
+                    <td>{{e}}</td>
+                    {%endfor%}
+                  </tr>
+                   <tr>
+                    {%for e in r[42:49]%}
+                    <td>{{e}}</td>
+                    {%endfor%}
+                  </tr>
+                  <tr>
+                    {%for e in r[49:56]%}
+                    <td>{{e}}</td>
+                    {%endfor%}
+                  </tr>
+                  <tr>
+                    {%for e in r[56:63]%}
+                    <td>{{e}}</td>
+                    {%endfor%}
+                  </tr>
+                  <tr>
+                    {%for e in r[63:70]%}
+                    <td>{{e}}</td>
+                    {%endfor%}
+                  </tr>
+                  <tr>
+                    {%for e in r[70:77]%}
+                    <td>{{e}}</td>
+                    {%endfor%}
+                  </tr>
+                  <tr>
+                    {%for e in r[77:84]%}
+                    <td>{{e}}</td>
+                    {%endfor%}
+                  </tr>
+                  <tr>
+                    {%for e in r[84:91]%}
+                    <td>{{e}}</td>
+                    {%endfor%}
+                  </tr>
+                  <tr>
+                    {%for e in r[91:98]%}
+                    <td>{{e}}</td>
+                    {%endfor%}
+                  </tr>
+                  <tr>
+                    {%for e in r[98:105]%}
+                    <td>{{e}}</td>
+                    {%endfor%}
+                  </tr>
+                  <tr>
+                    {%for e in r[105:112]%}
+                    <td>{{e}}</td>
+                    {%endfor%}
+                  </tr>
+                  <tr>
+                    {%for e in r[112:119]%}
+                    <td>{{e}}</td>
+                    {%endfor%}
+                  </tr>
+                  <tr>
+                    {%for e in r[119:126]%}
+                    <td>{{e}}</td>
+                    {%endfor%}
+                  </tr>
+                  <tr>
+                    {%for e in r[126:133]%}
+                    <td>{{e}}</td>
+                    {%endfor%}
+                  </tr>
+                  <tr>
+                    {%for e in r[133:140]%}
+                    <td>{{e}}</td>
+                    {%endfor%}
+                  </tr>
+                  <tr>
+                    {%for e in r[140:147]%}
+                    <td>{{e}}</td>
+                    {%endfor%}
+                  </tr>
+                  <tr>
+                    {%for e in r[147:154]%}
+                    <td>{{e}}</td>
+                    {%endfor%}
+                  </tr>
+                  <tr>
+                    {%for e in r[154:161]%}
+                    <td>{{e}}</td>
+                    {%endfor%}
+                  </tr>
+
+                <tr>
+                    {%for e in r[161:168]%}
+                    <td>{{e}}</td>
+                    {%endfor%}
+                  </tr>
+                  <tr>
+                    {%for e in r[168:175]%}
+                    <td>{{e}}</td>
+                    {%endfor%}
+                  </tr>
+                  <tr>
+                    {%for e in r[175:182]%}
+                    <td>{{e}}</td>
+                    {%endfor%}
+                  </tr>
+                  <tr>
+                    {%for e in r[182:189]%}
+                    <td>{{e}}</td>
+                    {%endfor%}
+                  </tr>
+                  <tr>
+                    {%for e in r[189:196]%}
+                    <td>{{e}}</td>
+                    {%endfor%}
+                  </tr>
+                  <tr>
+                    {%for e in r[196:203]%}
+                    <td>{{e}}</td>
+                    {%endfor%}
+                  </tr>
+
+                  <tr>
+                    {%for e in r[203:210]%}
+                    <td>{{e}}</td>
+                    {%endfor%}
+                  </tr>
+
+                  <tr>
+                    {%for e in r[210:217]%}
+                    <td>{{e}}</td>
+                    {%endfor%}
+                  </tr>
+
+                  <tr>
+                    {%for e in r[217:224]%}
+                    <td>{{e}}</td>
+                    {%endfor%}
+                  </tr>
+
+                  <tr>
+                    {%for e in r[224:231]%}
+                    <td>{{e}}</td>
+                    {%endfor%}
+                  </tr>
+
+                  <tr>
+                    {%for e in r[231:238]%}
+                    <td>{{e}}</td>
+                    {%endfor%}
+                  </tr>
+
+                  <tr>
+                    {%for e in r[238:245]%}
+                    <td>{{e}}</td>
+                    {%endfor%}
+                  </tr>
+
+                  <tr>
+                    {%for e in r[245:252]%}
+                    <td>{{e}}</td>
+                    {%endfor%}
+                  </tr>
+
+                  <tr>
+                    {%for e in r[252:259]%}
+                    <td>{{e}}</td>
+                    {%endfor%}
+                  </tr>
+
+                  <tr>
+                    {%for e in r[259:266]%}
+                    <td>{{e}}</td>
+                    {%endfor%}
+                  </tr>
+
+                  <tr>
+                    {%for e in r[266:273]%}
+                    <td>{{e}}</td>
+                    {%endfor%}
+                  </tr>
+
+                  <tr>
+                    {%for e in r[273:280]%}
+                    <td>{{e}}</td>
+                    {%endfor%}
+                  </tr>
+
+
+
+
+
+
+                </table>
+     
             </div>
         </div>
         <!-- Bootstrap core JS-->

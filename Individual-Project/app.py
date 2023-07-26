@@ -1,6 +1,8 @@
 from flask import Flask, render_template, request, redirect, url_for, flash
 from flask import session as login_session
 import pyrebase
+import pysurfline as surfAPI
+import waves as w
 
 Config = {
   "apiKey": "AIzaSyBpY6JY2UXe9E2eTMWfywHsmbsD-JES9Ps",
@@ -60,7 +62,20 @@ def signup():
 def home():
     uid = login_session['user']['localId']
     na = db.child('Users').child(uid).child('username').get().val()
-    return render_template("home.html", n  = na)
+    
+    params = {
+    "spotId": "584204204e65fad6a7709aad",
+    "days": 5,
+    "intervalHours": 3,
+    }
+
+    db1,catg = w.display(params)
+    print(db1)
+    
+
+
+
+    return render_template("home.html", n  = na, r = db1, c = catg)
     
     
 
